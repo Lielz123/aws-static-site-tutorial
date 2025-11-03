@@ -1,0 +1,6 @@
+#!/bin/bash
+# Delete the S3 bucket and all contents
+echo "🗑 Deleting S3 bucket: $BUCKET_NAME"
+aws s3 rm "s3://$BUCKET_NAME" --recursive
+aws s3api delete-bucket --bucket $BUCKET_NAME --region $REGION
+echo "✅ Bucket $BUCKET_NAME deleted"

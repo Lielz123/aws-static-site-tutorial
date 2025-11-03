@@ -1,0 +1,1 @@
+aws s3api put-public-access-block --bucket lilamandal05-static-site-bucket-2025 --public-access-block-configuration BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false
