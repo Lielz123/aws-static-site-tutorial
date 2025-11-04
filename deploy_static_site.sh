@@ -3,7 +3,7 @@
 # Variables
 BUCKET_NAME="lilamandal05-static-site-bucket-2025"                       # unique bucket name
 REGION="us-east-1"
-DIST_FOLDER="/C/Users/lmandal/Documents/AWS/Projects/my-static-site"     # local folder containing index.html, error.html, etc.
+DIST_FOLDER="/C/Users/xxxx/Documents/AWS/Projects/my-static-site"     # local folder containing index.html, error.html, etc.
 
 # ===============================
 # Functions
@@ -83,7 +83,7 @@ aws s3api put-public-access-block \
 
 # Apply policy
 
-aws s3api put-bucket-policy --bucket $BUCKET_NAME --policy file://C/Users/lmandal/Documents/AWS/Projects/createS3bucket/bucket-policy.json
+aws s3api put-bucket-policy --bucket $BUCKET_NAME --policy file://C/Users/xxxx/Documents/AWS/Projects/createS3bucket/bucket-policy.json
 
 # ===============================
 # Enable static website hosting
@@ -102,7 +102,7 @@ aws s3 sync "$DIST_FOLDER" "s3://$BUCKET_NAME"
 echo "✅ Your static website is live at:"
 echo "http://$BUCKET_NAME.s3-website-$REGION.amazonaws.com"
 
-aws s3 sync /C/Users/lmandal/Documents/AWS/Projects/my-static-site s3://lilamandal05-static-site-bucket-2025/
+aws s3 sync /C/Users/xxxx/Documents/AWS/Projects/my-static-site s3://lilamandal05-static-site-bucket-2025/
 
 
 #Run it
